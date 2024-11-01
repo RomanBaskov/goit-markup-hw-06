@@ -1,6 +1,6 @@
-/*.hidden{
+.hidden{
     display: none;
-}*/
+}
 
 body {
     font-family: "Roboto", sans-serif;
@@ -10,20 +10,13 @@ body {
 
 /*reset*/
 
-ul,
-ol {
+ul, ol {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1,h2,h3,h4,h5,h6,p {
     margin: 0;
 }
 
@@ -37,8 +30,8 @@ img {
     height: auto;
 }
 
-input {
-    font-family: inherit;
+button{
+    cursor: pointer;
 }
 
 .visually-hidden {
@@ -54,58 +47,34 @@ input {
     overflow: hidden;
 }
 
-.btn-footer:hover,
-.btn-footer:focus {
-    background-color: #404BBF;
-}
-
-.email-footer-input:hover,
-.email-footer-input:focus {
-    background-color: #404BBF;
-}
-
-.communication-item:hover {
-    box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.icons-item-svg:hover {
-    background-color: #404bbf;
-}
-.icons-item-svg:focus {
-    background-color: #404bbf;
-}
-
-/*commen*/
+/*common*/
 
 .container {
     max-width: 320px;
     padding: 0 16px;
     margin: 0 auto;
-
 }
 
-.button {
-    cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
+@media  screen and (min-width: 768px) {
 .container {
-    width: 768px;
+    max-width: 768px;
     }
 }
-    @media screen and (min-width: 1158px) {
-.container {
-    width: 1158px;
+
+@media screen and (min-width: 1158px) {
+    .container {
+    max-width: 1158px;
     padding: 0 15px;
-        }
     }
+}
 
-/* -------header-------- */
+/*header*/
 
-.header {
+.page-header {
     border-bottom: 1px solid #e7e9fc;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-    ;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -114,45 +83,50 @@ input {
     justify-content: space-between;
 }
 
-.nav-list, .contacts {
+.nav-list,
+.contacts
+{
     display: none;
 }
 
 .logo {
-    font-weight: 700;
+    font-family: "Raleway", sans-serif;
     font-size: 18px;
+    font-weight: 700;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #4d5ae5;
-    font-family: "Raleway", sans-serif;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 0px;
-    display: block;
+    color: #4D5AE5;
+}
+
+.header-logo {
     padding: 16px 0;
+    display: block;
 }
 
-.logo-part {
-    color: #2e2f42;
+.header-logo .logo-part {
+    color: #2E2F42;
 }
 
-.burger-btn {
+.burger-btn{
     padding: 0;
-    background-color: transparent;
     border: none;
+    background-color: transparent;
 }
 
-.burger-icon {
+.burger-icon{
     display: block;
     fill: #2f2f37;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
 .burger-btn {
     display: none;
-            }
+    }
+
+.header-nav {
+    display: flex;
+    align-items: center;
 }
 
 .nav-list {
@@ -161,56 +135,42 @@ input {
     gap: 40px;
 }
 
-.contacts {
-    display: block;
-}
-    
-.header-nav {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    margin-right: 120px;
+.header-logo {
     padding: 24px 0;
+    margin-right: 120px;
 }
 
 .nav-link {
-    display: block;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
     padding: 24px 0;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.current {
+.nav-link.current {
     position: relative;
-    color: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-         }
-    
-.current::after {
+
+}
+
+.nav-link.current::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -1px;
-    display: block;
     width: 100%;
     height: 4px;
-    background-color: #404bbf;
     border-radius: 2px;
-}
-    
-.nav-link:hover,
-.nav-link:focus {
-    color: #404bbf;
+    background-color: #404bbf;
+
 }
 
-.contacts-link:hover,
-.contacts-link:focus {
-    color: #404bbf;
+.contacts {
+    font-style: normal;
+    display: block;
 }
 
 .contacts-list {
@@ -220,33 +180,43 @@ input {
 }
 
 .contacts-link {
-    font-style: normal;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #434455
 }
 
-@media screen and (min-width: 1158px) {
-.logo {
+.nav-link:hover,
+.nav-link:focus,
+.contacts-link:hover,
+.contacts-link:focus,
+.nav-link.current {
+    color: #404bbf;
+}
+}
+
+@media screen and (min-width: 1158px){
+.header-logo {
     margin-right: 76px;
 }
 
 .contacts-list {
-    display: flex;
-    gap: 40px;
     flex-direction: row;
-    }
-
-.contacts-link{
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    }
+    align-items: center;
+    gap: 40px;
 }
 
-    /* -------mobile-menu-------- */
+.contacts-link {
+    padding: 24px 0;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #434455
+}
+}
+
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -258,21 +228,21 @@ input {
     visibility: hidden;
     pointer-events: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-    
+
 .mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
-    
+
 @media screen and (min-width: 768px) {
-.mobile-menu {
-    display: none;
-            }
+    .mobile-menu {
+        display: none;
+    }
 }
-    
+
 .mobile-menu-container {
     position: relative;
     padding-top: 72px;
@@ -281,7 +251,7 @@ input {
     flex-direction: column;
     height: 100%;
 }
-    
+
 .mobile-menu-close {
     position: absolute;
     top: 24px;
@@ -299,14 +269,17 @@ input {
     padding: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-    
+
 .modal-icon-close {
-fill: black;
-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: black;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-    
+
 .mobile-menu-nav {
-margin-bottom: auto;
+    margin-bottom: auto;
 }
+
+
+
