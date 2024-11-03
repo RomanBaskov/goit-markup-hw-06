@@ -883,7 +883,8 @@ title-button:focus {
 }
 
 .social-block{
-    margin-left: 40px;
+    margin-left: auto;
+        margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
