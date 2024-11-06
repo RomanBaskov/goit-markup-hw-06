@@ -516,51 +516,67 @@ title-button:focus {
 
 @media screen and (min-width: 768px) {
     .container {
-    padding-left: 16px;
-    padding-right: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .directions-list {
-    gap: 72px 24px;
+        gap: 72px 24px;
     }
 
     .directions-item {
-    width: calc((100% - 24px) / 2);
+        font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.11;
+            letter-spacing: 0.02em;
+            color: #2e2f42;
+        width: calc((100% - 24px) / 2);
+    }
+
+    .directions-item-text{
+        font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: #434455;
     }
 }
 
 @media screen and (min-width: 1158px) {
     .directions-list {
-    gap: 24px;
+        gap: 24px;
     }
 
     .directions-item {
-    width: calc((100% - 72px) / 4);
+        width: calc((100% - 72px) / 4);
     }
 
     .svg-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 112px;
-    background-color: #f4f4fd;
-    border-radius: 4px;
-    border: 1px solid #8e8f99;
-    margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        background-color: #f4f4fd;
+        border-radius: 4px;
+        border: 1px solid #8e8f99;
+        margin-bottom: 8px;
     }
 
     .directions-item-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-bottom: 8px;
-    text-align: left;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        margin-bottom: 8px;
+        text-align: left;
     }
 
     .directions-item-text {
-    font-weight: 400px;
+        font-weight: 400px;
+        
     }
 }
 
@@ -574,7 +590,7 @@ title-button:focus {
 
 .specialists-list {
     display: flex;
-    gap: 72px;
+    gap: 72px 24px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -585,7 +601,7 @@ title-button:focus {
     background-color: #FFFFFF;
     max-width: 264px;
 }
-    
+
 .social-icons-svg-list {
     display: flex;
     justify-content: center;
@@ -630,7 +646,7 @@ title-button:focus {
     text-align: center;
     color: #2e2f42;
 }
-        
+
 .list-container {
     padding: 32px 0;
 }
@@ -643,32 +659,47 @@ title-button:focus {
 .specialists-name-text {
     text-align: center;
 }
-    
+
 .item {
     fill: #f4f4fd;
 }
 
-        @media screen and (min-width: 768px) {
-            .team-list {
-                gap: 64px 24px;
-            }
-        }
-    
-@media screen and (min-width: 1158px) {
-.specialists {
-    padding-top: 120px;
-    padding-bottom: 120px;
+@media screen and (min-width: 768px) {
+    .team-list {
+        gap: 64px 24px;
     }
-    
-.specialists-list {
-    display: flex;
-    gap: 24px;
-    flex-wrap: nowrap;
+}
+
+@media screen and (min-width: 1158px) {
+    .specialists {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .specialists-list {
+        display: flex;
+        gap: 24px;
+        flex-wrap: nowrap;
     }
 }
 
 /* -----четверта секція----- */
 
+.communication{
+background-color: #FFFFFF;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.communication-title{
+font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+}
 .communication-link {
     display: flex;
     flex-wrap: wrap;
@@ -679,6 +710,7 @@ title-button:focus {
     width: 100%;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    margin-top: 72px;
 }
 
 .communication-item:hover .overlay {
@@ -716,24 +748,24 @@ title-button:focus {
 }
 
 @media screen and (min-width: 768px) {
-.communication-item {
-    width: calc((100% - 24px) / 2);
+    .communication-item {
+        width: calc((100% - 24px) / 2);
     }
 
-.communication-link {
-    gap: 72px 24px;
+    .communication-link {
+        gap: 72px 24px;
     }
 }
 
 @media screen and (min-width: 1158px) {
-.communication-link {
-    gap: 24px;
-    row-gap: 48px;
+    .communication-link {
+        gap: 24px;
+        row-gap: 48px;
     }
 
-.communication-item {
-    width: calc((100% - 48px) / 3);
-    box-shadow: none;
+    .communication-item {
+        width: calc((100% - 48px) / 3);
+        box-shadow: none;
     }
 }
 
@@ -882,9 +914,9 @@ title-button:focus {
     margin-top: 8px;
 }
 
-.social-block{
+.social-block {
     margin-left: auto;
-        margin-right: auto;
+    margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -917,18 +949,28 @@ title-button:focus {
         justify-content: center;
         margin-top: 8px;
     }
+
+    .webstudio-second {
+     text-align: left;
+  }
+
 }
 
 @media screen and (min-width: 1158px) {
-.container-footer {
+    
+    .container.container-footer{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .container-footer {
+        display: flex;
+        align-items: baseline;
         flex-wrap: nowrap;
         padding: 0 15px;
     }
 
-    .webstudio-second {
-        margin-right: 120px;
-    }
-
+   
     .email-footer-input {
         min-width: 264px;
     }
@@ -939,11 +981,13 @@ title-button:focus {
 
     .webstudio-second {
         text-align: left;
+        margin-right: 120px;
+        
     }
 
     .social-block {
         align-items: baseline;
-        margin-right: 120;
+        margin-right: 80px;
     }
 
     .footer-list-icons {
@@ -951,7 +995,13 @@ title-button:focus {
         gap: 16px;
         justify-content: center;
         margin-top: 8px;
-                }
+    }
+
+    .form-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    }
 }
 
 .backdrop {
@@ -1086,7 +1136,7 @@ title-button:focus {
     margin: 0 auto;
     border-radius: 4px;
     padding: 16px 32px;
-        
+
 }
 
 .btn-form-send:hover,
@@ -1151,7 +1201,7 @@ input:focus+svg {
     gap: 8px;
     align-items: center;
     display: flex;
-    
+
 }
 
 .checkbox-icon {
@@ -1180,7 +1230,7 @@ input:focus+svg {
     text-decoration: underline;
 }
 
- 
+
 .textarea-comment {
     padding: 8px 16px;
 }
@@ -1192,4 +1242,3 @@ input:focus+svg {
         padding: 72px 24px 24px 24px;
     }
 }
-
